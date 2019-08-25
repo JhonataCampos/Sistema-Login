@@ -1,0 +1,23 @@
+/*Login*/
+body{
+    font-family: "Hepta Slab", serif;
+}
+
+#form{
+    margin:1% 5% 0 5%;
+    padding:4% 5% 2% 5%;
+    margin-bottom: 1%;
+} 
+
+.form-group-sm .form-control{
+    width:60%;
+}
+
+.thumbnail{
+    text-align: right;
+    border: 0;
+}
+
+img{
+    padding-right:4%;
+}
