@@ -4,11 +4,14 @@
 ?>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Lexend+Deca&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
     <title>Mind Case: Login</title>
 </head>
 <body>
+    
     <!--NAVBAR-->
     <nav id="navbar1" class="navbar navbar-expand-md navbar-default">
         <div class="container">
@@ -20,6 +23,8 @@
             </ul>
         </div>            
     </nav>
+
+
     <!--Header-->
     <h1>Welcome to the Party!</h1>
     <h3>Insira seus dados cadastrais</h3>
@@ -55,17 +60,17 @@
 
 <!--Footer--> 
 <footer id="footer" class="page-footer font-small teal pt-4">
-        <div class="container-fluid text-center">
+        <div class="container-fluid text-center" id="footer_pt_1">
             <div class="row">
-                <hr id="footer-hr" class="clearfix w-100 d-md-none pb-3">
+                <div class="col-lg-12">
                         <h5 class="text-uppercase font-weight-bold">Mind Test</h5>
                         <p>Faça seu login! Vamos ver o que dá! :D</p>
                     </div>
+                </div>
             </div>
         </div>
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <div class="footer-copyright text-center py-3" id="footer_pt_2">© 2019 Copyright:
             <a href="https://github.com/JhonataCampos">Jhonata Campos - 2019</a>
         </div>
-        <!-- Copyright -->
 </footer>

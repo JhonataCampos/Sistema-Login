@@ -3,6 +3,8 @@
     session_start();
     unset($_SESSION["error_login"]);
 
+
+    //Conexão com o BD
     $server = "localhost";
     $username = "root";
     $password = "";

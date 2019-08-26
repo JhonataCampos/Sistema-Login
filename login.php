@@ -2,7 +2,7 @@
     session_start();
     //Se o usuário já estiver logado, enquanto ele não fizer logoff ele será redirecionado para
     //outra página
-    if(isset($_SESSION["nome"])){
+    if(isset($_SESSION["login_success"])){
         header("location:logged.php");
         die();
     }
@@ -10,12 +10,13 @@
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">    
     <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Lexend+Deca&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     <title>Mind Case: Login</title>
 </head>
 <body>
+
     <!--NAVBAR-->
     <nav id="navbar1" class="navbar navbar-expand-md navbar-default">
         <div class="container">
@@ -27,6 +28,8 @@
             </ul>
         </div>            
     </nav>
+
+    <!--Form-->
     <div class="container" id="form">  
         <div class ="row">
             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
@@ -43,16 +46,17 @@
                         <label for="pass">Senha</label>
                         <input type="password" name="pass" class="form-control" id="pass" placeholder="Senha" required>
                     </div>  
-                        <button type="submit" class ="btn btn-default">Entrar</button>
+                        <button type="submit" class ="btn btn-default" id="submit">Entrar</button>
                 </form>
                 
                 <?php
                 //Verifica se não houve falha
                     if(isset($_SESSION['error_login'])){
-                        echo "Falha no login. Verifique senha ou usuário.";
+                        echo "<p>Falha no login. Verifique senha ou usuário.</p>";
+                    }
                 //Notifica o usuário que ele foi cadastrado        
-                    }else if(isset($_SESSION['novo_cad'])){
-                        echo "Usuário Cadastrado com sucesso!";
+                    if(isset($_SESSION['novo_cad'])){
+                        echo "<p>Usuário Cadastrado com sucesso!</p>";
                     }
                 ?>
                 <p>Não possui cadastro? <a href="signup.php">Crie sua Conta</a></p><br>
@@ -69,10 +73,9 @@
 
 <!--Footer--> 
 <footer id="footer" class="page-footer font-small teal pt-4">
-        <div class="container-fluid text-center">
+        <div class="container-fluid text-center" id="footer_pt_1">
             <div class="row">
                 <div class="col-lg-12">
-                    <hr id="footer-hr" class="clearfix w-100 d-md-none pb-3">
                         <h5 class="text-uppercase font-weight-bold">Mind Test</h5>
                         <p>Faça seu login! Vamos ver o que dá! :D</p>
                     </div>
@@ -80,8 +83,7 @@
             </div>
         </div>
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <div class="footer-copyright text-center py-3" id="footer_pt_2">© 2019 Copyright:
             <a href="https://github.com/JhonataCampos">Jhonata Campos - 2019</a>
         </div>
-        <!-- Copyright -->
 </footer>

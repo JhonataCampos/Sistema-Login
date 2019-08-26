@@ -1,0 +1,26 @@
+body{
+    font-family: "Hepta Slab", serif;
+    height:100%;
+}
+
+#corpo{
+    min-height:62%;
+    position:relative;
+}
+
+/*FOOTER*/
+
+#footer {
+    position:absolute;
+    width:100%;
+    color:white;
+    background:rgb(158, 10, 10);
+}
+
+#footer_pt_1{
+    padding:3% 0 0 0;
+}
+
+#footer_pt_2{
+    padding:0 0 3% 0;
+}

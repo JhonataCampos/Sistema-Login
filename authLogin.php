@@ -18,6 +18,7 @@
             $stmt = $conn->prepare("SELECT * FROM cadastro WHERE email = ? AND senha = ?");
             $stmt->execute(array($_POST['email'], $_POST['pass']));
 
+            //recuperar uma única linha
             $result = $stmt->fetch();
 
             if(!empty($result)){
@@ -30,9 +31,11 @@
 
                 //Redireciona dependendo do privilégio do usuário
                 if($result["is_admin"] == 1){
+                    $_SESSION["login_success"] = 1;
                     header("location: admin.php");
                     die();
                 }else{
+                    $_SESSION["login_success"] = 1;
                     header("location: welcome.php");
                     die();
                 }
@@ -48,6 +51,8 @@
         {
         echo "Connection with Database failed: " . $exp->getMessage();
         }
+    //encerra a conexão
+    $conn=null;
 ?>
         
      

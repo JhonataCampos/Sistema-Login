@@ -1,4 +1,11 @@
-css
-logout
-direitos de edição para admin
-corrigir o aviso que o usuário foi cadastrado
+OBRIGATORIO
+
+-css
+-hash
+-edição de diereitos administrativos
+-horário de login - admin
+
+OPT
+
+-verificar se o email já é existente
+-paginação da tabela

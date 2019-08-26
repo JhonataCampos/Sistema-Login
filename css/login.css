@@ -5,12 +5,18 @@ body{
 
 #form{
     margin:1% 5% 0 5%;
-    padding:4% 5% 2% 5%;
+    padding:4% 5% 8% 8%;
     margin-bottom: 1%;
-} 
+}
 
 .form-group-sm .form-control{
     width:60%;
+    margin-bottom: 1%;
+
+}
+
+.btn{
+    margin-top:1.2%;
 }
 
 .thumbnail{
@@ -19,5 +25,20 @@ body{
 }
 
 img{
-    padding-right:4%;
+    padding-right:5%;
+}
+
+#footer {
+    position:absolute;
+    width:100%;
+    color:white;
+    background:rgb(158, 10, 10);
+}
+
+#footer_pt_1{
+    padding:3% 0 0 0;
+}
+
+#footer_pt_2{
+    padding:0 0 3% 0;
 }
