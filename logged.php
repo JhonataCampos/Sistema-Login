@@ -36,7 +36,7 @@
         <h3>Você já está logado no sistema :D</h3>
         <?php
             $adm = $_SESSION["admin"];
-            if($adm == 1){
+            if($adm == "Sim"){
                 echo "<h3>Você tem direitos administrativos. <a href='admin.php'>Clique Aqui</a> para ser redirecionado.</h3>";
             }else{
                 echo "<h3>Você é um usuário. <a href='welcome.php'>Clique Aqui</a> para ser redirecionado.</h3>";
