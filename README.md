@@ -85,4 +85,4 @@ http://localhost/Sistema-Login/login.php
 Divirta-se!
 
 ## Contribuições
-Contribuições são sempre bem-vindas! Este foi um projeto pessoal, e minha primeira experiência com PHP e SQL. Com certeza me serviu de muito aprendizado, e seria muito bom ter pessoas ajudando a aprimorar este crescente projeto! Por favor. abra uma Issue antes de dar pull no projeto :D
+Contribuições são sempre bem-vindas! Este foi um projeto pessoal, e minha primeira experiência com PHP e SQL. Com certeza me serviu de muito aprendizado, e seria muito bom ter pessoas ajudando a aprimorar este crescente projeto :D
