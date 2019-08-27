@@ -48,7 +48,7 @@ E executar o aplicativo "xampp-control".
 
 Em ambos os casos, uma janela como esta aparecerá:
 
-![Xampp-Control](https://github.com/JhonataCampos/Sistema-Login/readme/blob/master/xampp.JPG)
+![Xampp-Control](https://github.com/JhonataCampos/Sistema-Login/blob/master/readme/xampp.JPG)
 
 Aperte "start" nas linhas Apache e MySQL, e o serviços começarão a rodar em segundo plano, e sua página já estará no ar!
 
@@ -61,15 +61,15 @@ http://localhost/phpmyadmin/
 
 Esta janela vai aparecer:
 
-![phpMyAdmin - 1](https://github.com/JhonataCampos/Sistema-Login/readme/blob/master/sql1.JPG)
+![phpMyAdmin - 1](https://github.com/JhonataCampos/Sistema-Login/blob/master/readme/sql1.JPG)
 
 Clique em "novo", no canto superior esquerdo. Esta janela irá aparecer:
 
-![phpMyAdmin - 2](https://github.com/JhonataCampos/Sistema-Login/readme/blob/master/sql3.JPG)
+![phpMyAdmin - 2](https://github.com/JhonataCampos/Sistema-Login/blob/master/readme/sql3.JPG)
 
 Nomeie a nova Base de Dados como "usuarios" e selecione "criar". Logo após, Clique em "Importar":
 
-![phpMyAdmin - 3](https://github.com/JhonataCampos/Sistema-Login/readme/blob/master/sql2.JPG)
+![phpMyAdmin - 3](https://github.com/JhonataCampos/Sistema-Login/blob/master/readme/sql2.JPG)
 
 Clique em "Escolher arquivo", e vá até:
 
