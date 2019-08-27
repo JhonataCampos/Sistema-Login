@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Ago-2019 às 17:42
+-- Tempo de geração: 27-Ago-2019 às 22:40
 -- Versão do servidor: 10.4.6-MariaDB
 -- versão do PHP: 7.3.8
 
@@ -32,23 +32,21 @@ CREATE TABLE `cadastro` (
   `id` int(11) NOT NULL,
   `nome` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
-  `senha` varchar(24) NOT NULL,
+  `senha` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `rg` varchar(15) NOT NULL,
   `cpf` varchar(15) NOT NULL,
-  `is_admin` tinyint(1) NOT NULL
+  `last_access` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `is_admin` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `cadastro`
 --
 
-INSERT INTO `cadastro` (`id`, `nome`, `email`, `senha`, `rg`, `cpf`, `is_admin`) VALUES
-(1, 'Jhonata Campos', 'jhonata-campos@hotmail.com', 'Jhonata', '12.345.67-8', '123.456.789.10', 1),
-(2, 'Cícero de Moraes', 'teste@teste', '12341234', '123.321.123.54', '789.456.123.45', 0),
-(3, 'Jhonata Campos', 'jhonata-campos@hotmail.com', 'Jhonata', '12.345.67-8', '123.456.789.10', 1),
-(4, 'Cícero de Moraes', 'teste@teste', '12341234', '123.321.123.54', '789.456.123.45', 0),
-(5, 'Jhonata', 'hothot@hothto.com', '456', '654654564', '654654654', 0),
-(6, 'teste', 'teste@teste', '1234', '12341234', '12341234', 0);
+INSERT INTO `cadastro` (`id`, `nome`, `email`, `senha`, `rg`, `cpf`, `last_access`, `is_admin`) VALUES
+(1, 'Jhonata Campos', 'jhonata-campos@hotmail.com', '$2y$10$L0VrObQyC5JpAKN9rUty/OIwLjhDTdF2PPyFUdT7ffTOcKfbuXPpm', '12.345.678-9', '123.456.789-10', '27/08/19, 05:28:55 pm', 'Sim'),
+(2, 'Fulano de Tal', 'fulano@gmail.com', '$2y$10$L0VrObQyC5JpAKN9rUty/OIwLjhDTdF2PPyFUdT7ffTOcKfbuXPpm', '55.555.555-5', '123.465.789-10', '27/08/19, 05:25:31 pm', 'NÃ£o'),
+(3, 'Ciclano de Tal', 'ciclano@hotmail.com', '$2y$10$jx8SI3HlqM8z73MTs5.M4.OTj//rjWp7.p.mvUEw2S.DzQ46vHQRK', '32.145.698-7', '987.654.321-00', '00:00:00', 'NÃ£o');
 
 --
 -- Índices para tabelas despejadas
@@ -68,7 +66,7 @@ ALTER TABLE `cadastro`
 -- AUTO_INCREMENT de tabela `cadastro`
 --
 ALTER TABLE `cadastro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

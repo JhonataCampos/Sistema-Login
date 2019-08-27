@@ -45,7 +45,7 @@
                     $_SESSION['admin'] = $result['is_admin'];
                     
                     //Redireciona dependendo do privilégio do usuário
-                    if($result["is_admin"] == 1){
+                    if($result["is_admin"] == "Sim"){
                         $_SESSION["login_success"] = 1;
                         header("location: admin.php");
                         die();
