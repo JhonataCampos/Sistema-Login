@@ -15,6 +15,7 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Lexend+Deca&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/admin.css">
+        <link rel="shortcut icon" type="image/x-icon" href="css/img/mind.ico">
         <title>Mind Case: Admin</title>
     </head>
 
@@ -32,15 +33,16 @@
         </nav>
 
         <div class="container-fluid" id="corpo">
-            <h3>Bem-Vindo, <?php echo $_SESSION["nome"];?> </h3>
-
-            <h4>Aqui estão os usuários cadastrados:</h4>
+           
 
             <!--Exibição de usuários-->
             <div class="container" id="table">
-                <?php 
+                
+                <h2>Bem-Vindo, <?php echo $_SESSION["nome"];?>!</h2>
 
-                    echo $_SESSION["last_access"];
+                <h3>Aqui estão os usuários cadastrados:</h3>
+                
+                <?php 
 
                     //Função para construir a tabela
                         class TableRows extends RecursiveIteratorIterator {
@@ -119,7 +121,7 @@
             </div>
             <!-- Copyright -->
             <div class="footer-copyright text-center py-3" id="footer_pt_2">© 2019 Copyright:
-                <a href="https://github.com/JhonataCampos">Jhonata Campos - 2019</a>
+                <a href="https://github.com/JhonataCampos/Sistema-Login">Jhonata Campos - 2019</a>
             </div>
     </footer>
 

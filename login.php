@@ -15,7 +15,9 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">    
     <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Lexend+Deca&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="shortcut icon" type="image/x-icon" href="css/img/mind.ico">
     <title>Mind Case: Login</title>
+    
 </head>
 <body>
 
@@ -63,17 +65,13 @@
                 ?>
                 <p>Não possui cadastro? <a href="signup.php">Crie sua Conta</a></p><br>
             </div>
-            <div class="thumbnail" id="imagem">
-                <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                    <a href="https://mindconsulting.com.br/"><img src="img/mind.jpg"></a>  
+                <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 thumbnail" id="imagem">
+                    <a href="https://mindconsulting.com.br/"><img src="css/img/mind.jpg"></a>  
                 </div>
-            </div>
         </div>
-    </div>   
-</body>
-</html>
+    </div>  
 
-<!--Footer--> 
+    <!--Footer--> 
 <footer id="footer" class="page-footer font-small teal pt-4">
         <div class="container-fluid text-center" id="footer_pt_1">
             <div class="row">
@@ -86,6 +84,8 @@
         </div>
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3" id="footer_pt_2">© 2019 Copyright:
-            <a href="https://github.com/JhonataCampos">Jhonata Campos - 2019</a>
+            <a href="https://github.com/JhonataCampos/Sistema-Login">Jhonata Campos - 2019</a>
         </div>
 </footer>
+</body>
+</html>

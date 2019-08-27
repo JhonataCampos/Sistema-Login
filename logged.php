@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Lexend+Deca&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/logged.css">
+    <link rel="shortcut icon" type="image/x-icon" href="css/img/mind.ico">
     <title>Mind Case: Bem-Vindo!</title>
 </head>
 
@@ -30,15 +31,15 @@
     </nav>
     
     <div class="container" id="corpo">
-        <h3>Bem-Vindo, <?php echo $_SESSION["nome"]; ?> </h3>
+        <h2>Bem-Vindo, <?php echo $_SESSION["nome"]; ?>!</h2>
         
-        <h4>Você já está logado no sistema :D</h4>
+        <h3>Você já está logado no sistema :D</h3>
         <?php
             $adm = $_SESSION["admin"];
             if($adm == 1){
-                echo "<h4>Você tem direitos administrativos. <a href='admin.php'>Clique Aqui</a> para ser redirecionado.</h4>";
+                echo "<h3>Você tem direitos administrativos. <a href='admin.php'>Clique Aqui</a> para ser redirecionado.</h3>";
             }else{
-                echo "<h4>Você é um usuário. <a href='welcome.php'>Clique Aqui</a> para ser redirecionado.</h4>";
+                echo "<h3>Você é um usuário. <a href='welcome.php'>Clique Aqui</a> para ser redirecionado.</h3>";
             }
         ?>
     </div>    
@@ -57,7 +58,7 @@
         </div>
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3" id="footer_pt_2">© 2019 Copyright:
-            <a href="https://github.com/JhonataCampos">Jhonata Campos - 2019</a>
+            <a href="https://github.com/JhonataCampos/Sistema-Login">Jhonata Campos - 2019</a>
         </div>
 </footer>
 

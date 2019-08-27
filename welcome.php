@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Lexend+Deca&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/welcome.css">
+    <link rel="shortcut icon" type="image/x-icon" href="css/img/mind.ico">
     <title>Mind Case: Bem-Vindo!</title>
 </head>
 
@@ -33,15 +34,15 @@
     </nav>
 
     <div class="container" id="corpo">
-            <h3>Bem-Vindo, <?php echo $_SESSION["nome"]; ?> </h3>
+            <h2>Bem-Vindo, <?php echo $_SESSION["nome"]; ?>!</h2>
             
-            <h4>Seus dados cadastrais: </h4>
+            <h3>Seus dados cadastrais: </h3>
 
             <?php
-                echo "<p>Nome: " . $_SESSION['nome'] . "</p>";
-                echo "<p>E-mail: " . $_SESSION['email'] . "</p>";
-                echo "<p>RG: " . $_SESSION['rg'] . "</p>";
-                echo "<p>CPF: " . $_SESSION['cpf'] . "</p>";
+                echo "<h4>Nome: " . $_SESSION['nome'] . "</h4>";
+                echo "<h4>E-mail: " . $_SESSION['email'] . "</h4>";
+                echo "<h4>RG: " . $_SESSION['rg'] . "</h4>";
+                echo "<h4>CPF: " . $_SESSION['cpf'] . "</h4>";
             ?>
     </div>
 </body>
@@ -59,7 +60,7 @@
         </div>
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3" id="footer_pt_2">© 2019 Copyright:
-            <a href="https://github.com/JhonataCampos">Jhonata Campos - 2019</a>
+            <a href="https://github.com/JhonataCampos/Sistema-Login">Jhonata Campos - 2019</a>
         </div>
 </footer>
 

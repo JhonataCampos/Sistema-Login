@@ -71,7 +71,7 @@
         {
         echo "Connection with Database failed: " . $exp->getMessage();
         }
-    //encerra a conexão
+    //encerra a conexão+-
     $conn=null;
 ?>
         

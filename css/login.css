@@ -1,38 +1,79 @@
-/*Login*/
+
 body{
     font-family: "Hepta Slab", serif;
+    max-width: 100%;
+}
+/*Navbar*/
+.navbar{
+    background-color: black;
+    color:white; 
+    border: black;
+    border-radius:0;
 }
 
+.navbar-default .navbar-brand {
+    color:white;
+}
+
+.navbar-default .navbar-brand:hover {
+    color:rgb(156, 149, 136);
+}
+
+.navbar-default .navbar-nav > li > a{
+    color:white;
+    
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    color:rgb(156, 149, 136);
+    
+}
+
+
+/*Corpo*/
 #form{
-    margin:1% 5% 0 5%;
-    padding:4% 5% 8% 8%;
-    margin-bottom: 1%;
+    padding:3% 12% 5% 8%;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group-sm .form-control{
     width:60%;
     margin-bottom: 1%;
-
+    text-align: center;
 }
 
 .btn{
     margin-top:1.2%;
 }
 
+.btn-default:hover{
+    background-color:rgb(180, 28, 28);
+    color:white;
+}
+
+
+
+/*imagem*/
 .thumbnail{
-    text-align: right;
-    border: 0;
+    text-align: center;
+    margin:0;
+    border:0;
+    margin-top: 2%;
 }
 
-img{
-    padding-right:5%;
+#imagem{
+    padding-left:15%;
 }
 
+/*rodapé*/
 #footer {
     position:absolute;
+    display: flex;
+    flex-direction: column;
     width:100%;
     color:white;
-    background:rgb(158, 10, 10);
+    background: rgb(107, 6, 6);
 }
 
 #footer_pt_1{

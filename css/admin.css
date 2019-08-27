@@ -1,17 +1,46 @@
 body{
     font-family: "Hepta Slab", serif;
     height:100%;
-    width:100%;
+    
 }
 
+/*Navbar*/
+.navbar{
+    background-color: black;
+    color:white; 
+    border: black;
+    border-radius:0;
+}
+
+.navbar-default .navbar-brand {
+    color:white;
+}
+
+.navbar-default .navbar-brand:hover {
+    color:rgb(156, 149, 136);
+}
+
+.navbar-default .navbar-nav > li > a{
+    color:white;
+    
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    color:rgb(156, 149, 136);
+    
+}
+
+/*Corpo*/
+
 #corpo{
-    padding-bottom:5%;
+    padding:0 6%;
     min-height:62%; 
     display: inline-block;
 }
 
 /*TABELA*/
 .table{
+    width:100%;
     margin-top:2%;
     word-wrap: break-word;
     table-layout:fixed;
@@ -19,22 +48,22 @@ body{
 
 }
 
-/*TEXTO*/
-h3{
-    margin-bottom:2%;
+#table{
+    text-align: center;
 }
 
-h4{
+h3{
     margin-bottom:4%;
 }
 
-/*FOOTER*/
-
+/*Rodapé*/
 #footer {
     position:absolute;
     width:100%;
     color:white;
-    background:rgb(158, 10, 10);
+    display: flex;
+    flex-direction: column;
+    background: rgb(107, 6, 6);
 }
 
 #footer_pt_1{
