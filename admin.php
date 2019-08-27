@@ -8,6 +8,7 @@
         die();
     }
 ?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -30,77 +31,78 @@
             </div>            
         </nav>
 
-        <div class="container" id="corpo">
+        <div class="container-fluid" id="corpo">
             <h3>Bem-Vindo, <?php echo $_SESSION["nome"];?> </h3>
 
             <h4>Aqui estão os usuários cadastrados:</h4>
 
             <!--Exibição de usuários-->
+            <div class="container" id="table">
+                <?php 
 
-            <?php 
-                //Função para construir a tabela
-                    class TableRows extends RecursiveIteratorIterator {
-                        function __construct($it) {
-                            parent::__construct($it, self::LEAVES_ONLY);
-                        }
-                    
-                        function current() {
-                            return "<td>" . parent::current(). "</td>";
-                        }
-                    
-                        function beginChildren() {
-                            echo "<tr>";
-                        }
-                    
-                        function endChildren() {
-                            echo "</tr>" . "\n";
-                        }
-                    }    
+                    echo $_SESSION["last_access"];
 
-                //Conexão com o BD
+                    //Função para construir a tabela
+                        class TableRows extends RecursiveIteratorIterator {
+                            function __construct($it) {
+                                parent::__construct($it, self::LEAVES_ONLY);
+                            }
+                        
+                            function current() {
+                                return "<td>" . parent::current(). "</td>";
+                            }
+                        
+                            function beginChildren() {
+                                echo "<tr>";
+                            }
+                        
+                            function endChildren() {
+                                echo "</tr>" . "\n";
+                            }
+                        }    
 
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "usuarios";
+                    //Conexão com o BD
 
-                try{
-                    $conn = new PDO ("mysql:host=$servername;dbname=$dbname", $username, $password);
-                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    
-                    //Query
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "usuarios";
 
-                    $stmt = $conn->prepare("SELECT * FROM cadastro");
-                    $stmt->execute();
+                    try{
+                        $conn = new PDO ("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                        
+                        //Query
 
-                    //Construção do cabeçalho da tabela 
-                    echo "<table class='table table-bordered table-responsive'>";
-                    echo    "<thead>";
-                    echo        "<tr>";
-                    echo           "<th>ID</th>";
-                    echo           "<th>Nome</th>";
-                    echo           "<th>E-mail</th>";
-                    echo           "<th>Senha</th>";
-                    echo           "<th>RG</th>";
-                    echo           "<th>CPF</th>";
-                    echo           "<th>Admin</th>";
-                    echo           "<th>Operações</th>";
-                    echo        "</tr>";
-                    echo    "</thead>";
-                    echo    "<tbody>";
-                    
-                    //Chamada da função para construir os itens da tabela
-                    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-                    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-                            echo $v;
-                        }
-                    echo "</tbody>";
-                    echo "</table>";
+                        $stmt = $conn->prepare("SELECT id, nome, email, last_access, is_admin FROM cadastro");
+                        $stmt->execute();
 
-                }catch(PDOException $exp){
-                    echo "Connection with Database failed: " . $exp->getMessage();
-                }
-            ?> 
+                        //Construção do cabeçalho da tabela 
+                        echo "<table class='table table-hover table-condensed'>";
+                        echo    "<thead>";
+                        echo        "<tr>";
+                        echo           "<th>ID</th>";
+                        echo           "<th>Nome</th>";
+                        echo           "<th>E-mail</th>";
+                        echo           "<th>Último Acesso</th>";
+                        echo           "<th>Admin</th>";
+                        echo        "</tr>";
+                        echo    "</thead>";
+                        echo    "<tbody>";
+                        
+                        //Chamada da função para construir os itens da tabela
+                        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+                                echo $v;
+                            }
+                        echo "</tbody>";
+                        echo "</table>";
+
+                    }catch(PDOException $exp){
+                        echo "Connection with Database failed: " . $exp->getMessage();
+                    }
+                ?> 
+            </div>
         </div>
     </body>
 

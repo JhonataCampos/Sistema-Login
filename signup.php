@@ -1,6 +1,7 @@
 <?php
     session_start();
     unset($_SESSION["error_login"]);
+
 ?>
 <html>
 <head>
@@ -35,10 +36,22 @@
                 <label for="email">Nome</label>
                 <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome" required>
             </div>
-            <div class="form-group-sm">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="E-mail" required>
-            </div>
+            <!--Se caso o email já for existente-->
+            <?php
+                if(isset($_SESSION['email_existente'])){
+                    echo  "<div class='form-group-sm has-error'>";
+                    echo  "<label class='control-label' for='email'>E-mail</label>";
+                    echo  "<input type='email' name='email' class='form-control' id='email' placeholder='E-mail' required>";
+                    echo  "</div>";
+                    echo  "<p>E-mail já existente! Tente outro, por favor!</p>";
+                }else{
+                    echo  "<div class='form-group-sm'>";
+                    echo  "<label for='email'>E-mail</label>";
+                    echo  "<input type='email' name='email' class='form-control' id='email' placeholder='E-mail' required>";
+                    echo  "</div>";
+                }
+            ?>
+            
             <div class="form-group-sm">
                 <label for="email">RG</label>
                 <input type="text" name="rg" class="form-control" id="rg" placeholder="RG" required>

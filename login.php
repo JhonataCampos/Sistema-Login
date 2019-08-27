@@ -1,5 +1,7 @@
 <?php
     session_start();
+    unset($_SESSION['email_existente']);
+
     //Se o usuário já estiver logado, enquanto ele não fizer logoff ele será redirecionado para
     //outra página
     if(isset($_SESSION["login_success"])){
@@ -63,7 +65,7 @@
             </div>
             <div class="thumbnail" id="imagem">
                 <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-                    <img src="img/mind.jpg">  
+                    <a href="https://mindconsulting.com.br/"><img src="img/mind.jpg"></a>  
                 </div>
             </div>
         </div>

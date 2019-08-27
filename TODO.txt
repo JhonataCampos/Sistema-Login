@@ -1,11 +1,4 @@
 OBRIGATORIO
 
--css
--hash
--edição de diereitos administrativos
--horário de login - admin
-
-OPT
-
--verificar se o email já é existente
--paginação da tabela
+-css - 60%
+-máscara nos campos

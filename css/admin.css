@@ -1,22 +1,23 @@
 body{
     font-family: "Hepta Slab", serif;
     height:100%;
+    width:100%;
 }
 
 #corpo{
     padding-bottom:5%;
     min-height:62%; 
+    display: inline-block;
 }
 
 /*TABELA*/
 .table{
     margin-top:2%;
-}
+    word-wrap: break-word;
+    table-layout:fixed;
+    font-size:13px;
 
-.table-bordered{
-    border-radius:15px;
 }
-
 
 /*TEXTO*/
 h3{

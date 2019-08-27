@@ -8,6 +8,7 @@
         die();
     }
 ?>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -18,6 +19,7 @@
 </head>
 
 <body>
+
     <!--NAVBAR-->
     <nav id="navbar1" class="navbar navbar-expand-md navbar-default">
         <div class="container">
